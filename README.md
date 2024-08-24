@@ -4,17 +4,17 @@
 
 Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem ser usados para carregar ou restaurar dados em um banco de dados Django. 
 
-[Configura a documentação do Django sobre esse tópico](https://docs.djangoproject.com/en/5.1/topics/db/fixtures/#:~:text=A%20fixture%20is%20a%20collection,multiple%20directories%2C%20in%20multiple%20applications){:target="_blank"}
+[Configura a documentação do Django sobre esse tópico](https://docs.djangoproject.com/en/5.1/topics/db/fixtures/#:~:text=A%20fixture%20is%20a%20collection,multiple%20directories%2C%20in%20multiple%20applications)
 
 ## COMO RODAR ESSE PROJETO EM SEU COMPUTADOR:
 
 ### Requisitos
 
 - **Python 3.12**  
-  [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/){:target="_blank"}
+  [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
   Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):
-  [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs){:target="_blank"}
+  [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs)
 
 - **Virtualenv**
 
@@ -83,7 +83,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
     Após executar o servidor de desenvolvimento, você pode acessar o Django Admin no seguinte endereço:
 
-[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/){:target="_blank"}
+[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 Faça login com as credenciais do superusuário carregadas pelo fixture. O superuser é admin e a senha é root
 
@@ -122,7 +122,7 @@ django-admin startproject myproject
 
 ### Sobre Nosso Treinamento Prático-Profissional com projeto real para iniciantes e avançados em web DevOps Full-stack com Python, Django, Bootstrap e Linux.
 
-[Django Developers Brasil - Aprenda programando enquanto programa aprendendo!](https://django.dev.br/){:target="_blank"}
+[Django Developers Brasil - Aprenda programando enquanto programa aprendendo!](https://django.dev.br/)
 
 Nosso treinamento oferece uma experiência prática de aprendizado de programação, adequada tanto para iniciantes quanto para desenvolvedores avançados. Você participará de um projeto real de desenvolvimento de software em um ambiente corporativo autêntico, onde pessoas com diferentes níveis de conhecimento irão colaborar, aprendendo umas com as outras.
 
