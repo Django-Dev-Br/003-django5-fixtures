@@ -97,7 +97,8 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 
 ```
 003-django4-fixture-example/
-├── superuser_fixture.json  # Fixture contendo cópias dos dados do superusuário extraídas do banco de daddos db.sqlite3
+├── .gitignore             # Arquivo que especifica quais arquivos e diretórios o Git deve ignorar (não incluir no versionamento)
+├── superuser_fixture.json  # Fixture contendo cópias dos dados do superusuário extraídas do banco de dados db.sqlite3
 ├── db.sqlite3              # Banco de dados SQLite criado após as migrações
 ├── myproject/
 │   ├── __init__.py         # Marca o diretório como um pacote Python
@@ -106,6 +107,7 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 │   ├── urls.py             # Mapeamento de requisições HTTP e redirecionamento para os templates HTML
 │   └── wsgi.py             # Configurações para o servidor WSGI (usado para servir a aplicação)
 └── manage.py               # CLI do Django, um script de linha de comando para tarefas administrativas do Django
+
 ```
 
 ### Sobre Nosso Treinamento Prático-Profissional com projeto real para iniciantes e avançados em web DevOps Full-stack com Python, Django, Bootstrap e Linux.
