@@ -11,7 +11,8 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 - **Python 3.12**  
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
-  Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual): [Trabalhando com Múltiplas Versões do Python + venv](https://youtu.be/eetDeQrv0Rs?si=rAIDmLCgdeh7ouXa)
+  Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):
+  [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs).
 
 - **Virtualenv**
 
