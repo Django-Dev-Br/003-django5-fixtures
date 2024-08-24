@@ -4,6 +4,8 @@
 
 Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem ser usados para carregar ou restaurar dados em um banco de dados Django. 
 
+[Configura a documentação do Django sobre esse tópico](https://docs.djangoproject.com/en/5.1/topics/db/fixtures/#:~:text=A%20fixture%20is%20a%20collection,multiple%20directories%2C%20in%20multiple%20applications)
+
 ## COMO RODAR ESSE PROJETO EM SEU COMPUTADOR:
 
 ### Requisitos
@@ -108,6 +110,14 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 │   └── wsgi.py             # Configurações para o servidor WSGI (usado para servir a aplicação)
 └── manage.py               # CLI do Django, um script de linha de comando para tarefas administrativas do Django
 
+```
+
+### OBS: Como Criar um Projeto Django
+
+Se desejar criar seu próprio projeto Django, use o seguinte comando após criar e ativar a virtual env e instalar o django nela, conforme orientações acima:
+
+```bash
+django-admin startproject myproject
 ```
 
 ### Sobre Nosso Treinamento Prático-Profissional com projeto real para iniciantes e avançados em web DevOps Full-stack com Python, Django, Bootstrap e Linux.
