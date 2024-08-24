@@ -64,34 +64,33 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
     Após criar o superusuário, vamos salvar esses dados como um fixture.
 
-7. **Criar um Fixture com os dados do superusuário**:
-    ```bash
-    python manage.py dumpdata auth.user --indent 4 > superuser_fixture.json
-    ```
-
-    Este comando salva os dados do superusuário em um arquivo JSON chamado `superuser_fixture.json`. O arquivo será gerado na raiz do projeto.
-
-8. **Carregar o Fixture**:
+7. **Carregar o Fixture**:
     Se precisar restaurar os dados do superusuário a partir do fixture, use o seguinte comando:
 
     ```bash
     python manage.py loaddata superuser_fixture.json
     ```
 
-    Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`.
-
-9. **Execute o servidor de desenvolvimento**:
+    Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é admin e a senha é root
+   
+8. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
 
-### Acesse o Django Admin no seu navegador:
-
-Após executar o servidor de desenvolvimento, você pode acessar o Django Admin no seguinte endereço:
+    Após executar o servidor de desenvolvimento, você pode acessar o Django Admin no seguinte endereço:
 
 [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
-Faça login com as credenciais do superusuário carregadas pelo fixture.
+Faça login com as credenciais do superusuário carregadas pelo fixture. O superuser é admin e a senha é root
+
+9. **Criar um Fixture com os dados do superusuário**:
+    ```bash
+    python manage.py dumpdata auth.user --indent 4 > superuser_fixture.json
+    ```
+
+    Este comando salva os dados do superusuário em um arquivo JSON chamado `superuser_fixture.json`. O arquivo será gerado na raiz do projeto.
+
 
 ### Estrutura de Diretórios do Projeto
 
