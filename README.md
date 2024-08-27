@@ -35,7 +35,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 1. **Clone o repositório**:
     ```bash
     git clone https://github.com/Django-Dev-Br/003-django-4-fixtures.git
-    003-django-4-fixtures
+    cd 003-django-4-fixtures
     ```
 
 2. **Crie um ambiente virtual**:
