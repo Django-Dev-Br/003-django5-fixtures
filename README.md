@@ -10,44 +10,32 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
 ### Requisitos
 
-- **Python 3.12**  
+- **Python 3.12 com PIP e venv**
+- **No [repositório anterior](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
+- 
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
   Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):
   [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs)
 
-- **Virtualenv**
 
-  Para instalar o pacote `virtualenv` no Python, utilize os seguintes comandos:
-
-  - **Linux**:
-    ```bash
-    python3 -m pip install virtualenv
-    ```
-
-  - **Windows**:
-    ```bash
-    python -m pip install virtualenv
-    ```
-
-### Passos para Executar
+### 10 passos simples para executar
 
 1. **Clone o repositório**:
     ```bash
     git clone https://github.com/Django-Dev-Br/003-django-4-fixtures.git
-    cd 003-django-4-fixtures
     ```
 
 2. **Crie um ambiente virtual**:
-    ```bash
-    python3 -m venv myvenv  # Linux
-    python -m venv myvenv  # Windows
+    ```python
+    python3 -m venv myvenv  
+    python -m venv myvenv  
     ```
 
 3. **Ative o ambiente virtual criado**:
-    ```bash
-    source myvenv/bin/activate  # Linux
-    myvenv\Scripts\activate  # Windows
+    ```python
+    source myvenv/bin/activate 
+    myvenv\Scripts\activate  
     ```
 
 4. **Instale o Django**:
@@ -55,39 +43,41 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     pip install django==4.2.15
     ```
 
-5. **Execute as migrações do banco de dados**:
+5. **Acesse a pasta do repositório**:
+    ```bash
+    cd 003-django-4-fixtures
+    ```
+    
+6. **Execute as migrações do banco de dados**:
     ```bash
     python manage.py migrate
     ```
 
-6. **Crie um superusuário**:
+7. **Crie um superusuário**:
     ```bash
     python manage.py createsuperuser
     ```
+    - Após criar o superusuário, vamos salvar esses dados como um fixture.
 
-    Após criar o superusuário, vamos salvar esses dados como um fixture.
-
-7. **Carregar o Fixture**:
+8. **Carregar o Fixture**:
     Se precisar restaurar os dados do superusuário a partir do fixture, use o seguinte comando:
 
     ```bash
     python manage.py loaddata superuser_fixture.json
     ```
-
-    Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é admin e a senha é root
+    - Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é admin e a senha é root
    
-8. **Execute o servidor de desenvolvimento**:
+9. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
-
-    Após executar o servidor de desenvolvimento, você pode acessar o Django Admin no seguinte endereço:
+    - Após executar o servidor de desenvolvimento, você pode acessar o Django Admin no seguinte endereço:
 
 [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 Faça login com as credenciais do superusuário carregadas pelo fixture. O superuser é admin e a senha é root
 
-9. **Criar um Fixture com os dados do superusuário**:
+10. **Criar um Fixture com os dados do superusuário**:
     ```bash
     python manage.py dumpdata auth.user --indent 4 > superuser_fixture.json
     ```
