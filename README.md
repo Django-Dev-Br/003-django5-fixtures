@@ -11,7 +11,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 ### Requisitos
 
 - **Python 3.12 com PIP e venv**
-- **No [repositório anterior](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
+- **No [repositório 001](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
 - 
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
