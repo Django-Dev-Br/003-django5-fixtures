@@ -1,4 +1,4 @@
-# 003 Django 4 Fixture  - Backups e Restore de Banco de Dados
+# 003 Django 5 -  Fixture  - Backups e Restore de Banco de Dados
 
 ### O que são Fixtures no Django?
 
@@ -11,8 +11,9 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 ### Requisitos
 
 - **Python 3.12 com PIP e venv**
+-  **o Django 5 requer Python 3.10 ou superior.**
 - **No [repositório 001](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
-- 
+
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
   Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):
@@ -23,7 +24,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/Django-Dev-Br/003-django-4-fixtures.git
+    git clone https://github.com/Django-Dev-Br/003-django5-fixtures.git
     ```
 
 2. **Crie um ambiente virtual**:
@@ -40,12 +41,17 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
 4. **Instale o Django**:
     ```bash
-    pip install django==4.2.15
+    pip install django
+    ```
+     - use, preferencialmente, a versão 5.1. Para tanto, execute o comando:
+
+     ```bash
+    pip install  "django>=5.1,<=5.2"
     ```
 
 5. **Acesse a pasta do repositório**:
     ```bash
-    cd 003-django-4-fixtures
+    cd 003-django5-fixtures
     ```
     
 6. **Execute as migrações do banco de dados**:
@@ -53,13 +59,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     python manage.py migrate
     ```
 
-7. **Crie um superusuário**:
-    ```bash
-    python manage.py createsuperuser
-    ```
-    - Após criar o superusuário, vamos salvar esses dados como um fixture.
-
-8. **Carregar o Fixture**:
+7. **Carregar o Fixture**:
     Se precisar restaurar os dados do superusuário a partir do fixture, use o seguinte comando:
 
     ```bash
@@ -67,7 +67,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     ```
     - Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é admin e a senha é root
    
-9. **Execute o servidor de desenvolvimento**:
+8. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
@@ -77,7 +77,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
 Faça login com as credenciais do superusuário carregadas pelo fixture. O superuser é admin e a senha é root
 
-10. **Criar um Fixture com os dados do superusuário**:
+9. **Criar um Fixture com os dados do superusuário**:
     ```bash
     python manage.py dumpdata auth.user --indent 4 > superuser_fixture.json
     ```
