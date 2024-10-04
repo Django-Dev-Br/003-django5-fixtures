@@ -27,39 +27,62 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     git clone https://github.com/Django-Dev-Br/003-django5-fixtures.git
     ```
 
-2. **Crie um ambiente virtual**:
-    ```python
-    python3 -m venv myvenv  
-    python -m venv myvenv  
+2. **Crie  um ambiente virtual no diretório root**:
+
+   **Windows**
+    ```bash
+     python -m venv myvenv 
+    ```
+      **Linux**
+     ```bash
+     python3 -m venv myvenv  
     ```
 
 3. **Ative o ambiente virtual criado**:
-    ```python
-    source myvenv/bin/activate 
+
+   **Windows**
+    ```bash
     myvenv\Scripts\activate  
     ```
 
+     **Linux**
+    ```bash
+    source myvenv/bin/activate  
+    ```
+
 4. **Instale o Django**:
+
+   Fazer a instalação após a ativação da virtual env fará com que a instalação seja feita nessa pasta ao invés do computador. Isso significa que o pacote Django não estará disponivel para todos os usuários do computador, mas apenas para o contexto no qual essa venv esteja ativada. Veremos sua ativação logo abaixo.
+
+    **Instalação manualmente via gerenciador de dependências PIP**
     ```bash
     pip install django
     ```
-     - use, preferencialmente, a versão 5.1. Para tanto, execute o comando:
+    - use, preferencialmente, a versão 5.1. Para tanto, execute o comando:
 
      ```bash
     pip install  "django>=5.1,<=5.2"
     ```
 
-5. **Acesse a pasta do repositório**:
+    ----- **OU** -----
+
+    **Instalação via arquivo requirements**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    O arquivo requirements.txt é um arquivo de texto que contém uma lista de pacotes a ser instalado em uma venv. É uma boa prática de programação do ecossistema Python.
+   
+6. **Acesse a pasta do repositório**:
     ```bash
     cd 003-django5-fixtures
     ```
     
-6. **Execute as migrações do banco de dados**:
+7. **Execute as migrações do banco de dados**:
     ```bash
     python manage.py migrate
     ```
 
-7. **Carregar o Fixture**:
+8. **Carregar o Fixture**:
     Se precisar restaurar os dados do superusuário a partir do fixture, use o seguinte comando:
 
     ```bash
@@ -67,7 +90,7 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     ```
     - Isso carregará os dados do superusuário armazenados no fixture `superuser_fixture.json`. O superuser é admin e a senha é root
    
-8. **Execute o servidor de desenvolvimento**:
+9. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
@@ -103,7 +126,8 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 ```
 ### OBS: Observação sobre Fixtures no Django 5
 
-Ao utilizar fixtures no Django 5, pode ocorrer um problema com caracteres especiais (como acentuações) em nomes e palavras, por exemplo, "João". O Django pode gerar arquivos de fixture contendo caracteres incorretos ou codificados de forma errada, o que pode resultar em erros ao tentar carregar as fixtures com o comando loaddata.
+Ao utilizar fixtures no Django 5, pode ocorrer um problema com caracteres especiais (como acentuações). Por exemplo a palavra "João" pode ficar assim: "Jo�o". Isto é, o Django pode gerar arquivos de fixture contendo caracteres incorretos ou codificados de forma errada. Isso impedirá o carregamento da fixture. Nesses casos, a mensagem de erro é algo assim: "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe3 in position 795: invalid continuation byte".
+
 **Solução**: É recomendável inspecionar o arquivo de fixture gerado e verificar se há problemas com a codificação dos caracteres especiais. Caso encontre caracteres incorretos, faça a correção manual diretamente no arquivo
 
 ### OBS: Como Criar um Projeto Django
