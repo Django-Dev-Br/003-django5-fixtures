@@ -1,4 +1,4 @@
-# 003 Django 5 -  Fixture  - Backups e Restore de Banco de Dados
+# 003 Django 5 -  Fixtures  - Backups e Restore de Banco de Dados
 
 ### O que são Fixtures no Django?
 
@@ -88,7 +88,7 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 ### Estrutura de Diretórios do Projeto
 
 ```
-003-django4-fixture-example/
+003-django5-fixture-example/
 ├── .gitignore             # Arquivo que especifica quais arquivos e diretórios o Git deve ignorar (não incluir no versionamento)
 ├── superuser_fixture.json  # Fixture contendo cópias dos dados do superusuário extraídas do banco de dados db.sqlite3
 ├── db.sqlite3              # Banco de dados SQLite criado após as migrações
@@ -101,6 +101,10 @@ Faça login com as credenciais do superusuário carregadas pelo fixture. O super
 └── manage.py               # CLI do Django, um script de linha de comando para tarefas administrativas do Django
 
 ```
+### OBS: Observação sobre Fixtures no Django 5
+
+Ao utilizar fixtures no Django 5, pode ocorrer um problema com caracteres especiais (como acentuações) em nomes e palavras, por exemplo, "João". O Django pode gerar arquivos de fixture contendo caracteres incorretos ou codificados de forma errada, o que pode resultar em erros ao tentar carregar as fixtures com o comando loaddata.
+**Solução**: É recomendável inspecionar o arquivo de fixture gerado e verificar se há problemas com a codificação dos caracteres especiais. Caso encontre caracteres incorretos, faça a correção manual diretamente no arquivo
 
 ### OBS: Como Criar um Projeto Django
 
