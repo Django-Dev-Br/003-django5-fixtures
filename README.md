@@ -49,8 +49,14 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     ```bash
     source myvenv/bin/activate  
     ```
-
-4. **Instale o Django**:
+    
+4. **Acesse a pasta do repositório**:
+   
+    ```bash
+    cd 003-django5-fixtures
+    ```
+    
+6. **Instale o Django**:
 
    Fazer a instalação após a ativação da virtual env fará com que a instalação seja feita nessa pasta ao invés do computador. Isso significa que o pacote Django não estará disponivel para todos os usuários do computador, mas apenas para o contexto no qual essa venv esteja ativada. Veremos sua ativação logo abaixo.
 
@@ -63,7 +69,6 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
      ```bash
     pip install  "django>=5.1,<=5.2"
     ```
-
     ----- **OU** -----
 
     **Instalação via arquivo requirements**
@@ -72,10 +77,6 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
     ```
     O arquivo requirements.txt é um arquivo de texto que contém uma lista de pacotes a ser instalado em uma venv. É uma boa prática de programação do ecossistema Python.
    
-6. **Acesse a pasta do repositório**:
-    ```bash
-    cd 003-django5-fixtures
-    ```
     
 7. **Execute as migrações do banco de dados**:
     ```bash
