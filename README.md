@@ -10,14 +10,15 @@ Fixtures são arquivos que contêm dados em formato JSON, XML, ou YAML que podem
 
 ### Requisitos
 
-- **Python 3.12 com PIP e venv**
--  **o Django 5 requer Python 3.10 ou superior.**
+- [GIT](https://git-scm.com/downloads/win)
+- **[Python 3.12 com PIP e venv](https://www.python.org/)**
+- **o Django 5 requer Python 3.10 ou superior.**
 - **No [repositório 001](https://github.com/Django-Dev-Br/001-django5-basic-project) há explicações sobre PIP e venv**
 
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
   Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):
-  [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs)
+   [![Watch the video](https://img.youtube.com/vi/cxsaUE5JzDk/0.jpg)](https://youtu.be/cxsaUE5JzDk)
 
 
 ### 10 passos simples para executar
